@@ -3,49 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-namespace Blunder {
-    /// <summary>
-    /// 平均を算出
-    /// </summary>
-    public struct AverageCounter {
-        /// <summary>
-        /// 合計値
-        /// </summary>
-        public long SumValue { get; private set; }
-        /// <summary>
-        /// 加算回数
-        /// </summary>
-        public int Count { get; private set; }
-        /// <summary>
-        /// 平均値
-        /// </summary>
-        public double Average { get { return (double)SumValue / Count; } }
-        /// <summary>
-        /// 加算
-        /// </summary>
-        /// <param name="value"></param>
-        public void Add(int value) {
-            SumValue += value;
-            Count++;
-        }
-        /// <summary>
-        /// 加算
-        /// </summary>
-        /// <param name="other"></param>
-        public void Add(AverageCounter other) {
-            SumValue += other.SumValue;
-            Count += other.Count;
-        }
-        /// <summary>
-        /// 加算
-        /// </summary>
-        public static AverageCounter Sum(IEnumerable<AverageCounter> counters) {
-            AverageCounter sum = new AverageCounter();
-            foreach (AverageCounter c in counters) sum.Add(c);
-            return sum;
-        }
-    }
-
+namespace WTester {
     /// <summary>
     /// ビット演算とか数学・統計関係の処理とか。
     /// </summary>

@@ -1,28 +1,28 @@
 ﻿namespace WTester {
-	partial class WinRateControl {
-		/// <summary> 
-		/// 必要なデザイナ変数です。
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class WinRateControl {
+        /// <summary> 
+        /// 必要なデザイナ変数です。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary> 
-		/// 使用中のリソースをすべてクリーンアップします。
-		/// </summary>
-		/// <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
-		protected override void Dispose(bool disposing) {
-			if (disposing && (components != null)) {
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary> 
+        /// 使用中のリソースをすべてクリーンアップします。
+        /// </summary>
+        /// <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region コンポーネント デザイナで生成されたコード
+        #region コンポーネント デザイナで生成されたコード
 
-		/// <summary> 
-		/// デザイナ サポートに必要なメソッドです。このメソッドの内容を 
-		/// コード エディタで変更しないでください。
-		/// </summary>
-		private void InitializeComponent() {
+        /// <summary> 
+        /// デザイナ サポートに必要なメソッドです。このメソッドの内容を 
+        /// コード エディタで変更しないでください。
+        /// </summary>
+        private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -201,7 +201,7 @@
             // 
             // winRateLineControl4
             // 
-            this.winRateLineControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.winRateLineControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl4.CountReadOnly = true;
             this.winRateLineControl4.IndirectText = "0-0-0";
@@ -212,7 +212,7 @@
             // 
             // winRateLineControl3
             // 
-            this.winRateLineControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.winRateLineControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl3.CountReadOnly = false;
             this.winRateLineControl3.IndirectText = "0-0-0";
@@ -224,7 +224,7 @@
             // 
             // winRateLineControl2
             // 
-            this.winRateLineControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.winRateLineControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl2.CountReadOnly = false;
             this.winRateLineControl2.IndirectText = "0-0-0";
@@ -236,7 +236,7 @@
             // 
             // winRateLineControl1
             // 
-            this.winRateLineControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.winRateLineControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl1.CountReadOnly = false;
             this.winRateLineControl1.IndirectText = "0-0-0";
@@ -275,29 +275,29 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label13;
-		private WinRateLineControl winRateLineControl1;
-		private WinRateLineControl winRateLineControl2;
-		private WinRateLineControl winRateLineControl3;
-		private WinRateLineControl winRateLineControl4;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button4;
-	}
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private WinRateLineControl winRateLineControl1;
+        private WinRateLineControl winRateLineControl2;
+        private WinRateLineControl winRateLineControl3;
+        private WinRateLineControl winRateLineControl4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+    }
 }
