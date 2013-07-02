@@ -125,9 +125,12 @@ namespace WTester {
 				return;
 			}
 			int N = win + lose;
-			// 勝率 (引き分け除く)
-			double wr = N <= 0 ? 0 : win * 100.0 / N;
-			// 勝率の95%信頼区間
+			// 勝率 (引き分けは0.5勝扱い)
+            double NN = N + draw;
+            double wr = NN <= double.Epsilon ? 0 : (win + draw * 0.5) * 100.0 / NN;
+            // R差 (引き分けは0.5勝扱い)
+            double rating = N <= 0 ? 0 : Blunder.MathUtility.WinRateToRatingDiff(wr / 100.0);
+            // 勝率の95%信頼区間 (引き分けは除く)
 			double wL, wH;
 			if (N <= 0) {
 				wL = wH = 0.0; // 仮
@@ -136,18 +139,17 @@ namespace WTester {
 				wL *= 100.0;
 				wH *= 100.0;
 			}
-			// 有意確率
+			// 有意確率 (引き分けは除く)
 			double wp = Blunder.MathUtility.SignTest(win, lose) * 100.0;
-			// R差
-			double rating = N <= 0 ? 0 : Blunder.MathUtility.WinRateToRatingDiff(wr / 100.0);
 
 			// 表示の更新
 			textBox2.Text =
-				(win.ToString() + "-" + draw.ToString() + "-" + lose.ToString() + "/" + (win + lose).ToString()).PadRight(15)
+				(text + "/" + (win + lose).ToString()).PadRight(15)
 				+ ": " + wr.ToString("0.0").PadLeft(5)
+                + ", " + rating.ToString("+0.0;-0.0;+0.0").PadLeft(5)
 				+ ", " + (wL.ToString("0.0") + " - " + wH.ToString("0.0")).PadLeft(13)
 				+ ", " + wp.ToString("0.0").PadLeft(5)
-				+ ", " + rating.ToString("+0.0;-0.0;+0.0").PadLeft(5);
+                ;
 		}
 
 		/// <summary>
