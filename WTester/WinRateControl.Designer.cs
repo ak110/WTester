@@ -39,10 +39,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.winRateLineControl4 = new WTester.WinRateLineControl();
+            this.winRateLineControlSum = new WTester.WinRateLineControl();
             this.winRateLineControl3 = new WTester.WinRateLineControl();
             this.winRateLineControl2 = new WTester.WinRateLineControl();
             this.winRateLineControl1 = new WTester.WinRateLineControl();
+            this.winRateLineControl4 = new WTester.WinRateLineControl();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +78,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(64, 128);
+            this.label10.Location = new System.Drawing.Point(56, 166);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(11, 12);
             this.label10.TabIndex = 13;
@@ -120,7 +123,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 152);
+            this.label6.Location = new System.Drawing.Point(8, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 17;
@@ -129,7 +132,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(496, 144);
+            this.button1.Location = new System.Drawing.Point(496, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 23);
             this.button1.TabIndex = 18;
@@ -199,20 +202,20 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // winRateLineControl4
+            // winRateLineControlSum
             // 
-            this.winRateLineControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.winRateLineControlSum.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.winRateLineControl4.CountReadOnly = true;
-            this.winRateLineControl4.IndirectText = "0-0-0";
-            this.winRateLineControl4.Location = new System.Drawing.Point(40, 144);
-            this.winRateLineControl4.Name = "winRateLineControl4";
-            this.winRateLineControl4.Size = new System.Drawing.Size(512, 23);
-            this.winRateLineControl4.TabIndex = 16;
+            this.winRateLineControlSum.CountReadOnly = true;
+            this.winRateLineControlSum.IndirectText = "0-0-0";
+            this.winRateLineControlSum.Location = new System.Drawing.Point(40, 184);
+            this.winRateLineControlSum.Name = "winRateLineControlSum";
+            this.winRateLineControlSum.Size = new System.Drawing.Size(512, 23);
+            this.winRateLineControlSum.TabIndex = 16;
             // 
             // winRateLineControl3
             // 
-            this.winRateLineControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.winRateLineControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl3.CountReadOnly = false;
             this.winRateLineControl3.IndirectText = "0-0-0";
@@ -224,7 +227,7 @@
             // 
             // winRateLineControl2
             // 
-            this.winRateLineControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.winRateLineControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl2.CountReadOnly = false;
             this.winRateLineControl2.IndirectText = "0-0-0";
@@ -236,7 +239,7 @@
             // 
             // winRateLineControl1
             // 
-            this.winRateLineControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.winRateLineControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.winRateLineControl1.CountReadOnly = false;
             this.winRateLineControl1.IndirectText = "0-0-0";
@@ -245,6 +248,36 @@
             this.winRateLineControl1.Size = new System.Drawing.Size(514, 23);
             this.winRateLineControl1.TabIndex = 4;
             this.winRateLineControl1.ValueChanged += new System.EventHandler(this.winRateLineControl1_ValueChanged);
+            // 
+            // winRateLineControl4
+            // 
+            this.winRateLineControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.winRateLineControl4.CountReadOnly = false;
+            this.winRateLineControl4.IndirectText = "0-0-0";
+            this.winRateLineControl4.Location = new System.Drawing.Point(40, 144);
+            this.winRateLineControl4.Name = "winRateLineControl4";
+            this.winRateLineControl4.Size = new System.Drawing.Size(514, 23);
+            this.winRateLineControl4.TabIndex = 12;
+            this.winRateLineControl4.ValueChanged += new System.EventHandler(this.winRateLineControl4_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(16, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 12);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "④";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(56, 125);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 12);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "＋";
             // 
             // WinRateControl
             // 
@@ -258,20 +291,23 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.winRateLineControlSum);
             this.Controls.Add(this.winRateLineControl4);
             this.Controls.Add(this.winRateLineControl3);
             this.Controls.Add(this.winRateLineControl2);
             this.Controls.Add(this.winRateLineControl1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "WinRateControl";
-            this.Size = new System.Drawing.Size(704, 184);
+            this.Size = new System.Drawing.Size(704, 232);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,7 +323,7 @@
         private WinRateLineControl winRateLineControl1;
         private WinRateLineControl winRateLineControl2;
         private WinRateLineControl winRateLineControl3;
-        private WinRateLineControl winRateLineControl4;
+        private WinRateLineControl winRateLineControlSum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -299,5 +335,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private WinRateLineControl winRateLineControl4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -30,9 +30,9 @@
             // winRateControl1
             // 
             this.winRateControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.winRateControl1.Location = new System.Drawing.Point(0, 97);
+            this.winRateControl1.Location = new System.Drawing.Point(0, 84);
             this.winRateControl1.Name = "winRateControl1";
-            this.winRateControl1.Size = new System.Drawing.Size(708, 180);
+            this.winRateControl1.Size = new System.Drawing.Size(708, 237);
             this.winRateControl1.TabIndex = 1;
             // 
             // label1
@@ -50,7 +50,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 277);
+            this.ClientSize = new System.Drawing.Size(708, 321);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.winRateControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

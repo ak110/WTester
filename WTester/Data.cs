@@ -42,6 +42,7 @@ namespace WTester {
         public string Text1;
         public string Text2;
         public string Text3;
+        public string Text4;
 
         public override string ToString() { return Name; }
     }

@@ -29,31 +29,39 @@ namespace WTester {
             OnValueChanged();
         }
 
+        private void winRateLineControl4_ValueChanged(object sender, EventArgs e) {
+            OnValueChanged();
+        }
+
         /// <summary>
         /// 値が変わった
         /// </summary>
         private void OnValueChanged() {
-            winRateLineControl4.WinCount =
+            winRateLineControlSum.WinCount =
                 winRateLineControl1.WinCount +
                 winRateLineControl2.WinCount +
-                winRateLineControl3.WinCount;
-            winRateLineControl4.DrawCount =
+                winRateLineControl3.WinCount +
+                winRateLineControl4.WinCount;
+            winRateLineControlSum.DrawCount =
                 winRateLineControl1.DrawCount +
                 winRateLineControl2.DrawCount +
-                winRateLineControl3.DrawCount;
-            winRateLineControl4.LoseCount =
+                winRateLineControl3.DrawCount +
+                winRateLineControl4.DrawCount;
+            winRateLineControlSum.LoseCount =
                 winRateLineControl1.LoseCount +
                 winRateLineControl2.LoseCount +
-                winRateLineControl3.LoseCount;
+                winRateLineControl3.LoseCount +
+                winRateLineControl4.LoseCount;
         }
 
         /// <summary>
         /// ①へコピー
         /// </summary>
         private void button1_Click(object sender, EventArgs e) {
-            winRateLineControl1.IndirectText = winRateLineControl4.IndirectText;
+            winRateLineControl1.IndirectText = winRateLineControlSum.IndirectText;
             winRateLineControl2.Clear();
             winRateLineControl3.Clear();
+            winRateLineControl4.Clear();
         }
 
         /// <summary>
@@ -104,6 +112,7 @@ namespace WTester {
                         ent.Text1 = winRateLineControl1.IndirectText;
                         ent.Text2 = winRateLineControl2.IndirectText;
                         ent.Text3 = winRateLineControl3.IndirectText;
+                        ent.Text4 = winRateLineControl4.IndirectText;
                         SaveData();
                     }
                     return;
@@ -115,6 +124,7 @@ namespace WTester {
                 Text1 = winRateLineControl1.IndirectText,
                 Text2 = winRateLineControl2.IndirectText,
                 Text3 = winRateLineControl3.IndirectText,
+                Text4 = winRateLineControl4.IndirectText,
             });
             SaveData();
         }
@@ -129,6 +139,7 @@ namespace WTester {
                 winRateLineControl1.IndirectText = ent.Text1;
                 winRateLineControl2.IndirectText = ent.Text2;
                 winRateLineControl3.IndirectText = ent.Text3;
+                winRateLineControl4.IndirectText = ent.Text4;
             }
         }
 
