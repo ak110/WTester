@@ -6,6 +6,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using ShogiCore;
 
 namespace WTester {
     /// <summary>
@@ -52,6 +53,13 @@ namespace WTester {
                 winRateLineControl2.LoseCount +
                 winRateLineControl3.LoseCount +
                 winRateLineControl4.LoseCount;
+            // 2標本間の検定
+            var dp = MathUtility.DoubleSignTest(
+                winRateLineControl1.WinCount,
+                winRateLineControl1.LoseCount,
+                winRateLineControl2.WinCount,
+                winRateLineControl2.LoseCount) * 100.0;
+            textBox2.Text = double.IsNaN(dp) ? "-" : dp.ToString("0.0");
         }
 
         /// <summary>

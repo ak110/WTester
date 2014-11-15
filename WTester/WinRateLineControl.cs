@@ -6,6 +6,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using ShogiCore;
 
 namespace WTester {
     public partial class WinRateLineControl : UserControl {
@@ -129,18 +130,18 @@ namespace WTester {
             double NN = N + draw;
             double wr = NN <= double.Epsilon ? 0 : (win + draw * 0.5) * 100.0 / NN;
             // R差 (引き分けは0.5勝扱い)
-            double rating = N <= 0 ? 0 : WTester.MathUtility.WinRateToRatingDiff(wr / 100.0);
+            double rating = N <= 0 ? 0 : MathUtility.WinRateToRatingDiff(wr / 100.0);
             // 勝率の95%信頼区間 (引き分けは除く)
             double wL, wH;
             if (N <= 0) {
                 wL = wH = 0.0; // 仮
             } else {
-                WTester.MathUtility.GetWinConfidence(win, lose, 0.05, out wL, out wH);
+                MathUtility.GetWinConfidence(win, lose, 0.05, out wL, out wH);
                 wL *= 100.0;
                 wH *= 100.0;
             }
             // 有意確率 (引き分けは除く)
-            double wp = WTester.MathUtility.SignTest(win, lose) * 100.0;
+            double wp = MathUtility.SignTest(win, lose) * 100.0;
 
             // 表示の更新
             textBox2.Text =

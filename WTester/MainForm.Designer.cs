@@ -23,17 +23,9 @@
         /// コード エディタで変更しないでください。
         /// </summary>
         private void InitializeComponent() {
-            this.winRateControl1 = new WTester.WinRateControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.winRateControl1 = new WTester.WinRateControl();
             this.SuspendLayout();
-            // 
-            // winRateControl1
-            // 
-            this.winRateControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.winRateControl1.Location = new System.Drawing.Point(0, 84);
-            this.winRateControl1.Name = "winRateControl1";
-            this.winRateControl1.Size = new System.Drawing.Size(708, 237);
-            this.winRateControl1.TabIndex = 1;
             // 
             // label1
             // 
@@ -46,11 +38,19 @@
     "ルでレーティングの差を算出したもの。\r\n　95%信頼区間：信頼水準95%での勝率の信頼区間。引き分けは無視します。\r\n　有意確率：相手に対して統計的に有意に強い" +
     "と言えない確率。引き分けは無視します。";
             // 
+            // winRateControl1
+            // 
+            this.winRateControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.winRateControl1.Location = new System.Drawing.Point(0, 99);
+            this.winRateControl1.Name = "winRateControl1";
+            this.winRateControl1.Size = new System.Drawing.Size(708, 303);
+            this.winRateControl1.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 321);
+            this.ClientSize = new System.Drawing.Size(708, 402);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.winRateControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -46,6 +46,11 @@
             this.winRateLineControl4 = new WTester.WinRateLineControl();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -279,10 +284,50 @@
             this.label11.TabIndex = 9;
             this.label11.Text = "＋";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Location = new System.Drawing.Point(10, 228);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(679, 58);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "2標本間の検定";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(14, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(365, 12);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "①がA vs B、②がA\' vs Bの結果であるとき、A\'がAより強いと言えない確率：";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(387, 18);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(80, 19);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(473, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(11, 12);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "%";
+            // 
             // WinRateControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
@@ -307,7 +352,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "WinRateControl";
-            this.Size = new System.Drawing.Size(704, 232);
+            this.Size = new System.Drawing.Size(704, 303);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +385,9 @@
         private WinRateLineControl winRateLineControl4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -3,7 +3,49 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-namespace WTester {
+namespace ShogiCore {
+    /// <summary>
+    /// 平均を算出
+    /// </summary>
+    public struct AverageCounter {
+        /// <summary>
+        /// 合計値
+        /// </summary>
+        public long SumValue { get; private set; }
+        /// <summary>
+        /// 加算回数
+        /// </summary>
+        public int Count { get; private set; }
+        /// <summary>
+        /// 平均値
+        /// </summary>
+        public double Average { get { return (double)SumValue / Count; } }
+        /// <summary>
+        /// 加算
+        /// </summary>
+        /// <param name="value"></param>
+        public void Add(int value) {
+            SumValue += value;
+            Count++;
+        }
+        /// <summary>
+        /// 加算
+        /// </summary>
+        /// <param name="other"></param>
+        public void Add(AverageCounter other) {
+            SumValue += other.SumValue;
+            Count += other.Count;
+        }
+        /// <summary>
+        /// 加算
+        /// </summary>
+        public static AverageCounter Sum(IEnumerable<AverageCounter> counters) {
+            AverageCounter sum = new AverageCounter();
+            foreach (AverageCounter c in counters) sum.Add(c);
+            return sum;
+        }
+    }
+
     /// <summary>
     /// ビット演算とか数学・統計関係の処理とか。
     /// </summary>
@@ -205,14 +247,19 @@ namespace WTester {
         /// <param name="nm">値が負の要素数</param>
         /// <returns>片側有意確率。両側なら倍にする。</returns>
         public static double SignTest(int np, int nm) {
-            double p = 0.0; // 片側有意確率
             int N = np + nm;
-            for (int i = 0, m = Math.Min(np, nm); i < m; i++) {
-                p += Combin(N, i);
+            if (N < 1000) { // オーバーフローしそうなところから近似計算に切り替える
+                double p = 0.0; // 片側有意確率
+                for (int i = 0, m = Math.Min(np, nm); i < m; i++) {
+                    p += Combin(N, i);
+                }
+                p /= Math.Pow(2, N);
+                // 正な側を基準とする
+                return nm < np ? p : 1 - p;
+            } else {
+                double x = (np - N * 0.5) / Math.Sqrt(0.5 * (1.0 - 0.5) * N);
+                return 1.0 - NormSDist(x);
             }
-            p = p / Math.Pow(2, N);
-            // 正な側を基準とする
-            return nm < np ? p : 1 - p;
         }
 
         /// <summary>
@@ -406,6 +453,25 @@ namespace WTester {
 
             // 正な側を基準とする
             return rankSumP < rankSumN ? p : 1 - p;
+        }
+
+        /// <summary>
+        /// 2標本の検定
+        /// </summary>
+        /// <param name="np1">勝った回数（a vs b）</param>
+        /// <param name="nm1">負けた回数（a vs b）</param>
+        /// <param name="np2">勝った回数（a' vs b）</param>
+        /// <param name="nm2">負けた回数（a' vs b）</param>
+        /// <returns>aよりa'が強いか否かの検定の有意確率。（適当表現）</returns>
+        public static double DoubleSignTest(int np1, int nm1, int np2, int nm2) {
+            double N1 = np1 + nm1;
+            double N2 = np2 + nm2;
+            double N = N1 + N2;
+            double p1 = (double)np1 / N1;
+            double p2 = (double)np2 / N2;
+            double p = (double)(np1 + np2) / N;
+            double x = Math.Sqrt((double)(N1 * N2) / N) * (p2 - p1) / Math.Sqrt(p * (1.0 - p));
+            return 1.0 - NormSDist(x);
         }
 
 #if 未実装
