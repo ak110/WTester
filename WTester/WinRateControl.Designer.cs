@@ -47,9 +47,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             this.label3.Location = new System.Drawing.Point(56, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 4;
             this.label3.Text = "＋";
             // 
             // label7
@@ -77,7 +77,7 @@
             this.label7.Location = new System.Drawing.Point(56, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(17, 12);
-            this.label7.TabIndex = 9;
+            this.label7.TabIndex = 7;
             this.label7.Text = "＋";
             // 
             // label10
@@ -95,7 +95,7 @@
             this.label13.Location = new System.Drawing.Point(160, 8);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(317, 12);
-            this.label13.TabIndex = 3;
+            this.label13.TabIndex = 1;
             this.label13.Text = "勝敗数/合計　　　　　　勝率　　　 R差　95%信頼区間 有意確率";
             // 
             // label2
@@ -104,7 +104,7 @@
             this.label2.Location = new System.Drawing.Point(16, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 12);
-            this.label2.TabIndex = 17;
+            this.label2.TabIndex = 2;
             this.label2.Text = "①";
             // 
             // label4
@@ -113,7 +113,7 @@
             this.label4.Location = new System.Drawing.Point(16, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 12);
-            this.label4.TabIndex = 17;
+            this.label4.TabIndex = 5;
             this.label4.Text = "②";
             // 
             // label5
@@ -122,7 +122,7 @@
             this.label5.Location = new System.Drawing.Point(16, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 12);
-            this.label5.TabIndex = 17;
+            this.label5.TabIndex = 8;
             this.label5.Text = "③";
             // 
             // label6
@@ -131,7 +131,7 @@
             this.label6.Location = new System.Drawing.Point(8, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 17;
+            this.label6.TabIndex = 14;
             this.label6.Text = "合計";
             // 
             // button1
@@ -140,7 +140,7 @@
             this.button1.Location = new System.Drawing.Point(496, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(72, 23);
-            this.button1.TabIndex = 18;
+            this.button1.TabIndex = 16;
             this.button1.Text = "①へコピー";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -152,7 +152,7 @@
             this.label8.Location = new System.Drawing.Point(592, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 12);
-            this.label8.TabIndex = 19;
+            this.label8.TabIndex = 18;
             this.label8.Text = "保存名：";
             // 
             // textBox1
@@ -161,7 +161,7 @@
             this.textBox1.Location = new System.Drawing.Point(592, 32);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 19);
-            this.textBox1.TabIndex = 20;
+            this.textBox1.TabIndex = 19;
             // 
             // button2
             // 
@@ -169,7 +169,7 @@
             this.button2.Location = new System.Drawing.Point(616, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 21;
+            this.button2.TabIndex = 20;
             this.button2.Text = "保存(&S)";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -183,7 +183,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 22;
+            this.comboBox1.TabIndex = 21;
             // 
             // button3
             // 
@@ -191,7 +191,7 @@
             this.button3.Location = new System.Drawing.Point(616, 120);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 23;
+            this.button3.TabIndex = 22;
             this.button3.Text = "読み込み(&L)";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -202,7 +202,7 @@
             this.button4.Location = new System.Drawing.Point(616, 144);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 24;
+            this.button4.TabIndex = 23;
             this.button4.Text = "削除(&D)";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -216,7 +216,7 @@
             this.winRateLineControlSum.Location = new System.Drawing.Point(40, 184);
             this.winRateLineControlSum.Name = "winRateLineControlSum";
             this.winRateLineControlSum.Size = new System.Drawing.Size(512, 23);
-            this.winRateLineControlSum.TabIndex = 16;
+            this.winRateLineControlSum.TabIndex = 15;
             // 
             // winRateLineControl3
             // 
@@ -227,7 +227,7 @@
             this.winRateLineControl3.Location = new System.Drawing.Point(40, 104);
             this.winRateLineControl3.Name = "winRateLineControl3";
             this.winRateLineControl3.Size = new System.Drawing.Size(514, 23);
-            this.winRateLineControl3.TabIndex = 12;
+            this.winRateLineControl3.TabIndex = 9;
             this.winRateLineControl3.ValueChanged += new System.EventHandler(this.winRateLineControl3_ValueChanged);
             // 
             // winRateLineControl2
@@ -239,7 +239,7 @@
             this.winRateLineControl2.Location = new System.Drawing.Point(40, 64);
             this.winRateLineControl2.Name = "winRateLineControl2";
             this.winRateLineControl2.Size = new System.Drawing.Size(514, 23);
-            this.winRateLineControl2.TabIndex = 8;
+            this.winRateLineControl2.TabIndex = 6;
             this.winRateLineControl2.ValueChanged += new System.EventHandler(this.winRateLineControl2_ValueChanged);
             // 
             // winRateLineControl1
@@ -251,7 +251,7 @@
             this.winRateLineControl1.Location = new System.Drawing.Point(40, 24);
             this.winRateLineControl1.Name = "winRateLineControl1";
             this.winRateLineControl1.Size = new System.Drawing.Size(514, 23);
-            this.winRateLineControl1.TabIndex = 4;
+            this.winRateLineControl1.TabIndex = 3;
             this.winRateLineControl1.ValueChanged += new System.EventHandler(this.winRateLineControl1_ValueChanged);
             // 
             // winRateLineControl4
@@ -272,7 +272,7 @@
             this.label9.Location = new System.Drawing.Point(16, 149);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(17, 12);
-            this.label9.TabIndex = 17;
+            this.label9.TabIndex = 11;
             this.label9.Text = "④";
             // 
             // label11
@@ -281,7 +281,7 @@
             this.label11.Location = new System.Drawing.Point(56, 125);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(17, 12);
-            this.label11.TabIndex = 9;
+            this.label11.TabIndex = 10;
             this.label11.Text = "＋";
             // 
             // groupBox1
@@ -292,18 +292,18 @@
             this.groupBox1.Location = new System.Drawing.Point(10, 228);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(679, 58);
-            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "2標本間の検定";
             // 
-            // label12
+            // label14
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(14, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(365, 12);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "①がA vs B、②がA\' vs Bの結果であるとき、A\'がAより強いと言えない確率：";
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(473, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(11, 12);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "%";
             // 
             // textBox2
             // 
@@ -314,14 +314,14 @@
             this.textBox2.TabIndex = 1;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label14
+            // label12
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(473, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(11, 12);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "%";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(14, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(365, 12);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "①がA vs B、②がA\' vs Bの結果であるとき、A\'がAより強いと言えない確率：";
             // 
             // WinRateControl
             // 
