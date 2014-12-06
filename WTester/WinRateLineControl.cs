@@ -10,6 +10,16 @@ using ShogiCore;
 
 namespace WTester {
     public partial class WinRateLineControl : UserControl {
+        double significanceLevel = 0.05;
+
+        /// <summary>
+        /// 有意水準（既定値：0.05(5%)）
+        /// </summary>
+        public double SignificanceLevel {
+            get { return significanceLevel; }
+            set { significanceLevel = value; ResetTextBox2(); }
+        }
+
         public WinRateLineControl() {
             InitializeComponent();
             // 最初に1回読んどく。
@@ -127,16 +137,16 @@ namespace WTester {
             }
             int N = win + lose;
             // 勝率 (引き分けは0.5勝扱い)
-            double NN = N + draw;
-            double wr = NN <= double.Epsilon ? 0 : (win + draw * 0.5) * 100.0 / NN;
+            int NN = N + draw;
+            double wr = NN <= 0 ? 0 : (win + draw * 0.5) * 100.0 / NN;
             // R差 (引き分けは0.5勝扱い)
             double rating = N <= 0 ? 0 : MathUtility.WinRateToRatingDiff(wr / 100.0);
-            // 勝率の95%信頼区間 (引き分けは除く)
+            // 勝率の信頼区間 (引き分けは除く)
             double wL, wH;
             if (N <= 0) {
                 wL = wH = 0.0; // 仮
             } else {
-                MathUtility.GetWinConfidence(win, lose, 0.05, out wL, out wH);
+                MathUtility.GetWinConfidence(win, lose, significanceLevel, out wL, out wH);
                 wL *= 100.0;
                 wH *= 100.0;
             }

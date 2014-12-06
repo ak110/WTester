@@ -9,7 +9,19 @@ namespace WTester {
     /// データ
     /// </summary>
     public class Data {
-        public List<DataEntry> Entries = new List<DataEntry>();
+        /// <summary>
+        /// データ
+        /// </summary>
+        public List<DataEntry> Entries { get; set; }
+        /// <summary>
+        /// 有意水準
+        /// </summary>
+        public int SignificanceLevelPermil { get; set; }
+
+        public Data() {
+            Entries = new List<DataEntry>();
+            SignificanceLevelPermil = 50; // 5%
+        }
 
         /// <summary>
         /// 読み込み

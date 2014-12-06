@@ -86,6 +86,7 @@ namespace WTester {
                 comboBox1.SelectedIndex = 0;
             }
             comboBox1.EndUpdate();
+            numericUpDown1.Value = Math.Min(Math.Max(data.SignificanceLevelPermil, numericUpDown1.Minimum), numericUpDown1.Maximum);
         }
 
         /// <summary>
@@ -97,6 +98,7 @@ namespace WTester {
             foreach (object item in comboBox1.Items) {
                 data.Entries.Add((DataEntry)item);
             }
+            data.SignificanceLevelPermil = (int)numericUpDown1.Value;
             data.Serialize(path);
         }
 
@@ -163,6 +165,18 @@ namespace WTester {
                     SaveData();
                 }
             }
+        }
+
+        /// <summary>
+        /// 有意水準
+        /// </summary>
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e) {
+            SaveData();
+            var significanceLevel = (double)numericUpDown1.Value / 1000.0;
+            winRateLineControl1.SignificanceLevel = significanceLevel;
+            winRateLineControl2.SignificanceLevel = significanceLevel;
+            winRateLineControl3.SignificanceLevel = significanceLevel;
+            winRateLineControl4.SignificanceLevel = significanceLevel;
         }
     }
 }

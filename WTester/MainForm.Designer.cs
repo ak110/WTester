@@ -32,25 +32,25 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(424, 72);
+            this.label1.Size = new System.Drawing.Size(426, 72);
             this.label1.TabIndex = 2;
             this.label1.Text = "勝敗数を入力すると、横に勝率等を算出して表示します。\r\n\r\n　勝率：引き分けは0.5勝・0.5敗扱いでの勝率。\r\n　R差：勝率からBradley-Terry モデ" +
-    "ルでレーティングの差を算出したもの。\r\n　95%信頼区間：信頼水準95%での勝率の信頼区間。引き分けは無視します。\r\n　有意確率：相手に対して統計的に有意に強い" +
-    "と言えない確率。引き分けは無視します。";
+    "ルでレーティングの差を算出したもの。\r\n　信頼区間：設定欄で指定した有意水準での勝率の信頼区間。引き分けは無視します。\r\n　有意確率：相手に対して統計的に有意に" +
+    "強いと言えない確率。引き分けは無視します。";
             // 
             // winRateControl1
             // 
             this.winRateControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.winRateControl1.Location = new System.Drawing.Point(0, 99);
             this.winRateControl1.Name = "winRateControl1";
-            this.winRateControl1.Size = new System.Drawing.Size(708, 303);
+            this.winRateControl1.Size = new System.Drawing.Size(767, 303);
             this.winRateControl1.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 402);
+            this.ClientSize = new System.Drawing.Size(767, 402);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.winRateControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
