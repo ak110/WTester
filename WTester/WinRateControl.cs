@@ -177,6 +177,7 @@ namespace WTester {
             winRateLineControl2.SignificanceLevel = significanceLevel;
             winRateLineControl3.SignificanceLevel = significanceLevel;
             winRateLineControl4.SignificanceLevel = significanceLevel;
+            winRateLineControlSum.SignificanceLevel = significanceLevel;
         }
     }
 }
