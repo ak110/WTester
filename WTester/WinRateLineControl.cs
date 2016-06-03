@@ -155,7 +155,7 @@ namespace WTester {
 
             // 表示の更新
             textBox2.Text =
-                (text + "/" + (win + lose).ToString()).PadRight(15)
+                (text + "/" + (win + draw + lose).ToString()).PadRight(15)
                 + ": " + wr.ToString("0.0").PadLeft(5)
                 + ", " + rating.ToString("+0.0;-0.0;+0.0").PadLeft(5)
                 + ", " + (wL.ToString("0.0") + " - " + wH.ToString("0.0")).PadLeft(13)
